@@ -24,7 +24,8 @@
   "homepage": "https://github.com/HendrikCrause/rpg-presentations#readme",
   "dependencies": {
     "@vue/component-compiler-utils": "^3.1.2",
-    "animate.css": "^4.1.0",
+    "animate.css": "^3.7.0",
+    "dist": "^0.1.2",
     "eagle.js": "^0.6.1",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-clean-dist": "0.0.6",

@@ -1,0 +1,10 @@
+@import '~/styles/_variables.scss';
+
+@font-face {
+    font-family: 'Oswald';
+    src: url(~/styles/Oswald-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: $font-paragraghs;
+}

@@ -1,8 +1,9 @@
-import Eagle from 'eagle.js'
 import Vue from 'vue'
+import Eagle from 'eagle.js'
 import 'animate.css'
+import '~/styles/globals.scss'
 
-import App from './App.vue'
+import App from '~/App.vue'
 
 Vue.use(Eagle)
 
