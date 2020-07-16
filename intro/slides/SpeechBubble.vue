@@ -1,21 +1,22 @@
 <template lang="pug">
     div
         .attention
-            vue-typer(
-                text='What is your favorite part \nabout playing tabletop RPGs?'
-                :repeat=0
-                :pre-type-delay=500
-                :type-delay=40
-                caret-animation='smooth'
-                v-if='step > 1'
-                )
+            .line(v-for='(line, index) in lines')
+                vue-typer(
+                    :text='line'
+                    :repeat=0
+                    :pre-type-delay=500
+                    :type-delay=40
+                    caret-animation='smooth'
+                    v-if='step > index + 1'
+                    )
         .speech
 </template>
 
 <script>
     import { VueTyper } from 'vue-typer'
     export default {
-        props: ['step'],
+        props: ['step', 'lines'],
         components: {
             VueTyper
         }
@@ -24,6 +25,11 @@
 
 <style scoped lang="scss">
     @import './styles/_variables.scss';
+
+    .line {
+        display: flex;
+        justify-content: center;
+    }
 
     .vue-typer {
         font-family: $font-headers;
@@ -38,11 +44,11 @@
 
     .attention {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         background-color: $attention-background;
+        padding: 4em;
         height: 12em;
-        padding-top: 4em;
-        padding-bottom: 1em;
     }
 
     .speech {

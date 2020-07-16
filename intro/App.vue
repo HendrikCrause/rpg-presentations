@@ -4,17 +4,29 @@
             Loader
 
         slide(enterNext='slideInDown' leaveNext='slideOutUp' enterPrev='slideInDown' leavePrev='slideOutUp' steps=2)
-            SpeechBubble(:step='step')
+            SpeechBubble(:step='step', :lines=[
+                "What is your favorite part \nabout playing tabletop RPGs?"])
 
-        slide(enter='slideInUp' leave='slideOutDown')
-            h3 Title of this slide
-            p Paragraph 1.
-            p Paragraph 2.
+        slide(enterNext='slideInUp' enterPrev='slideInLeft' leaveNext='slideOutLeft' leavePrev='slideOutDown')
+            h3 It's really a social thing
+
+        slide(enterNext='slideInRight' enterPrev='slideInLeft' leaveNext='slideOutLeft' leavePrev='slideOutRight')
+            h3 Epic tales of grand adventures
         
-        slide(:steps='3')
-            h3 Slide with bullet points
-            p(v-if='step >= 2') This will appear first. {{step}}
-            p(v-if='step >= 3') This will appear second.
+        slide(enterNext='slideInRight' enterPrev='slideInLeft' leaveNext='slideOutLeft' leavePrev='slideOutRight')
+            h3 Random chances with lasting consequences
+        
+        slide(enterNext='slideInRight' enterPrev='slideInLeft' leaveNext='slideOutLeft' leavePrev='slideOutRight')
+            h3 Finding unique ways to solve problems
+        
+        slide(enterNext='slideInRight' enterPrev='slideInUp' leaveNext='slideOutDown' leavePrev='slideOutRight')
+            h3 Playing Interesting characters
+
+        slide(enterNext='slideInDown' leaveNext='slideOutUp' enterPrev='slideInDown' leavePrev='slideOutUp' steps=3)
+            SpeechBubble(:step='step', :lines=[
+                'Now imagine that these elements can be captured...', 
+                'and played as a video game'])
+
 </template>
 
 <script>
@@ -29,9 +41,9 @@
             Loader
         },
         created: function() {
-            setInterval(function() {
-                this.nextStep()
-            }.bind(this), 4000)
+            // setInterval(function() {
+            //     this.nextStep()
+            // }.bind(this), 4000)
         }
     }
 </script>
