@@ -14,13 +14,16 @@
 </template>
 
 <script>
-    import { VueTyper } from 'vue-typer'
-    export default {
-        props: ['step', 'lines'],
-        components: {
-            VueTyper
-        }
+import { VueTyper } from 'vue-typer'
+export default {
+    props: {
+        lines: Array,
+        step: Number
+    },
+    components: {
+        VueTyper
     }
+}
 </script>
 
 <style scoped lang="scss">
@@ -32,7 +35,7 @@
     }
 
     .vue-typer {
-        font-family: $font-headers;
+        font-family: $font-secondary;
         text-align: center;
         font-size: 3em;
         
