@@ -1,7 +1,7 @@
 <template lang="pug">
     div
         h3 {{title}}
-        h4.subtitle {{subtitle}}
+        h4.subtitle.subtext {{subtitle}}
         .content
             ul
                 eg-transition(
@@ -9,7 +9,12 @@
                     leave='fadeOutRight'
                     v-for='(point, index) in points' 
                 ) 
-                    li(v-if='step > index + 1') {{point}}
+                    li(v-if='step > index + 1')
+                        template(v-for='p in point.split("*")')
+                            span.subtext(v-if='p.startsWith(">")') {{p.substring(1)}}
+                            template(v-else) {{p}}
+
+
 </template>
 
 <script>
@@ -46,8 +51,11 @@ li {
 .subtitle {
     text-align: center;
     margin-top: -0.5em;
-    color: #aaa;
-    font-family: fantasy;
+    font-family: $font-primary;
+}
+
+.subtext {
+    color: $subtext-font-color;
 }
 </style>
 

@@ -9,9 +9,10 @@ export default {
             title: "It's a social thing",
             subtitle: '',
             points: [
-                'Most common reason for playing',
+                'Get together with friends for a game',
                 'Meet new people',
-                'Become part of a growing and passionate community'
+                'Become part of a growing and passionate community',
+                'Probably the most common reason for playing'
             ],
             enterNext: 'slideInUp',
             leavePrev: 'slideOutDown'
@@ -19,12 +20,12 @@ export default {
         {
             type: 'Bullets',
             title: 'Epic tales of grand adventures',
-            subtitle: '',
+            subtitle: 'Cooparative Storytelling',
             points: [
-                'Exploring old Dungeons',
-                'Fighting armies of monsters',
-                'Saving those in need',
-                'Exploring a fantasy world'
+                'Create and explore a fantasy world',
+                'Filled with old dungeons, towns, forests, oceans, etc.',
+                'Fighting armies of creatures',
+                'On a quest to save those in need *>(for a small fee of course)'
             ]
         },
         {
