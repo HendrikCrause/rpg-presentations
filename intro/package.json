@@ -29,7 +29,7 @@
     "eagle.js": "^0.6.1",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-clean-dist": "0.0.6",
-    "pug": "^3.0.0",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "sass": "^1.26.9",
     "typescript": "^3.9.6",
